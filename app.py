@@ -44,7 +44,7 @@ def index():
 	graphs = [dict(data=data, layout=layout)]
 	ids = ['graph-{}'.format(i) for i, _ in enumerate(graphs)]
 	graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-	return render_template('index.html',ids=ids,graphJSON=graphJSON,endTime=data_t[-1].strftime("%Y-%m-%dT%H:%M"),startTime=data_t[0].strftime("%Y-%m-%dT%H:%M"), currentVal=np.round(data_y[-1],2), changeDay=np.round(changeDay,2), displayRange=displayRange, dailyVolatility=dailyVolatility, annVolatility=annVolatility)
+	return render_template('index.html',ids=ids,graphJSON=graphJSON,endTime=data_t[-1].strftime("%Y-%m-%dT%H:%M"),startTime=data_t[0].strftime("%Y-%m-%dT%H:%M"), currentVal=np.round(data_y[-1],2), changeDay=np.round(changeDay,2), displayRange=displayRange, dailyVolatility=np.round(dailyVolatility,2), annVolatility=np.round(annVolatility))
 
 def calcSMA(array, nums):
 	outArray = []
