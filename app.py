@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 import csv
 
-with open('data_clean.csv', newline='') as csvfile:
+with open('data_cleaned.csv', newline='') as csvfile:
     data_input = list(csv.reader(csvfile))
 
 
