@@ -1,3 +1,21 @@
 body{
-	background:#333333;
+	background:#15171a;
+	color:#ffffff;
+}
+h3{
+	color:#ffffff;
+}
+h1{
+	font-weight: 100;
+	font-size:50px;
+}
+h2{
+	font-weight: 100;
+	font-size:30px;
+}
+.legendtext{
+	fill:#cccccc !important;
+}
+.col{
+	margin-bottom:20px;
 }
